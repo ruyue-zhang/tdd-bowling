@@ -34,4 +34,13 @@ public class BowlingGameTest {
         int result = bowlingGame.calcScore(downCount);
         assertEquals(90, result);
     }
+
+
+    @Test
+    void should_involve_when_strike_in_ten_frame() {
+        int[] downCount = {10, 7, 3, 4, 5, 1, 1, 3, 6, 0, 8, 3, 4, 8, 1, 2, 2, 10, 5, 4};
+        BowlingGame bowlingGame = new BowlingGame();
+        int result = bowlingGame.calcScore(downCount);
+        assertEquals(101, result);
+    }
 }
