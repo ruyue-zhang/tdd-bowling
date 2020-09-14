@@ -51,4 +51,12 @@ public class BowlingGameTest {
         int result = bowlingGame.calcScore(downCount);
         assertEquals(97, result);
     }
+
+    @Test
+    void should_return_300_when_strike_every_frame() {
+        int[] downCount = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+        BowlingGame bowlingGame = new BowlingGame();
+        int result = bowlingGame.calcScore(downCount);
+        assertEquals(300, result);
+    }
 }
