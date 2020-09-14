@@ -27,4 +27,11 @@ public class BowlingGameTest {
         assertEquals(75, result);
     }
 
+    @Test
+    void should_involve_when_hit_once_strike() {
+        int[] downCount = {10, 7, 3, 4, 5, 1, 1, 3, 6, 0, 8, 3, 4, 8, 1, 2, 2, 3, 5};
+        BowlingGame bowlingGame = new BowlingGame();
+        int result = bowlingGame.calcScore(downCount);
+        assertEquals(90, result);
+    }
 }
