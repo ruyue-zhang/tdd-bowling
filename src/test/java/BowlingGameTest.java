@@ -10,4 +10,13 @@ public class BowlingGameTest {
         int result = bowlingGame.calcScore(downCount);
         assertEquals(0, result);
     }
+
+    @Test
+    void should_sum_all_score_when_hit_twice_can_not_spare_every_frame() {
+        int[] downCount = {2, 3, 4, 3, 4, 5, 1, 1, 3, 6, 0, 8, 3, 4, 8, 1, 2, 2, 3, 5};
+        BowlingGame bowlingGame = new BowlingGame();
+        int result = bowlingGame.calcScore(downCount);
+        assertEquals(68, result);
+    }
+
 }
