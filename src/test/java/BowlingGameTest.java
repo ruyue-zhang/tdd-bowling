@@ -43,4 +43,12 @@ public class BowlingGameTest {
         int result = bowlingGame.calcScore(downCount);
         assertEquals(101, result);
     }
+
+    @Test
+    void should_involve_when_spare_in_ten_frame() {
+        int[] downCount = {10, 7, 3, 4, 5, 1, 1, 3, 6, 0, 8, 3, 4, 8, 1, 2, 2, 8, 2, 5};
+        BowlingGame bowlingGame = new BowlingGame();
+        int result = bowlingGame.calcScore(downCount);
+        assertEquals(97, result);
+    }
 }
